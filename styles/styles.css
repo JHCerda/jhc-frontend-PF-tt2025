@@ -1,0 +1,164 @@
+/* Fuente predeterminada del sitio */
+body {
+  background-color:  rgb(135, 166, 250); /* Fondo */
+  font-family: 'Roboto', sans-serif; /* Fuente importada desde Google Fonts */
+  margin: 0;                          /* Elimina márgenes del navegador */
+  padding: 0;                         /* Elimina relleno por defecto */
+}
+
+/* Estilo para el encabezado de la página */
+header {
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+  background-color: rgb(26, 68, 184); /* Fondo */
+  color: white;              /* Texto blanco */
+  padding: 10px;             /* Espacio interior */
+  text-align:start;        /* Centra el texto */
+}
+
+header img {
+  width: 120px;
+  height: 120px;
+}
+
+/* Navegación en forma de lista horizontal */
+nav ul {
+  list-style: none;          /* Elimina viñetas */
+  padding: 20px;                /* Elimina relleno */
+  display: flex;              /* Activa Flexbox */
+  gap: 40px;                 /* Espacio entre los ítems de la lista */
+}
+
+/* Enlaces del menú */
+nav ul li a {
+  color: white;              /* Texto blanco */
+  text-decoration: none;     /* Sin subrayado */
+  font-weight: bold;         /* Negrita */
+}
+
+/* Estilo general para todas las secciones */
+section {
+  padding: 20px;             /* Espacio interior */
+  text-align: center;        /* Centra el texto */
+}
+
+/* Contenedor de los productos con Flexbox */
+.productos-container {
+  display: flex;             /* Activa Flexbox */
+  justify-content:center;    /* Centra horizontalmente */
+  gap: 20px;                 /* Espacio entre productos */
+  flex-wrap: wrap;           /* Permite que bajen a otra línea en pantallas pequeñas */
+  margin-top: 20px;          /* Espacio superior */
+}
+
+/* Cada tarjeta de producto */
+.producto {
+  text-align: center;        /* Centra el contenido */
+}
+
+/* Imágenes de los productos */
+.producto img {
+  width: 150px;              /* Ancho fijo */
+  height: 150px;             /* Alto fijo */
+  object-fit: cover;         /* Cubre el área sin deformarse */
+}
+
+/* */
+.reseñas-container {
+  background-color: aqua;
+  display: grid;
+  row-gap: 10px;
+  column-gap: 25px;
+
+}
+
+/* */
+.reseña {
+  margin: 5px;
+  background-color: aliceblue;
+  text-align: center;
+}
+
+
+
+/* Estilo para el formulario de contacto */
+form {
+  display: flex;             /* Activa Flexbox */
+  flex-direction: column;    /* Coloca los elementos en columna */
+  gap: 10px;                 /* Espacio entre campos */
+  max-width: 400px;          /* Ancho máximo */
+  margin: 0 auto;            /* Centrado horizontal */
+}
+
+form label {
+  text-align: left;
+}
+
+/* Campos del formulario */
+input, textarea {
+  padding: 10px;             /* Espacio interior */
+  border: 1px solid #ccc;    /* Borde gris claro */
+  border-radius: 4px;        /* Bordes redondeados */
+}
+
+/* Botón del formulario */
+button {
+  padding: 10px;             /* Espacio interior */
+  background-color:red; /* Fondo verde */
+  color: white;              /* Texto blanco */
+  border: none;              /* Sin borde */
+  border-radius: 4px;        /* Bordes redondeados */
+  cursor: pointer;           /* Cambia el cursor al pasar por encima */
+}
+
+/* Estilo para logos Redes Sociales */
+.redes {
+  display: flex;
+  justify-content: center;
+  padding-top: 1%;
+  gap: 40px;
+}
+
+.redes img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Estilo para el pie de página */
+footer {
+  background-color: #333;    /* Fondo oscuro */
+  color: white;              /* Texto blanco */
+  text-align: center;        /* Centrado de texto */
+  padding: 15px;             /* Espacio interior */
+  margin-top: 30px;          /* Separación del contenido anterior */
+}
+
+/* ------------------ MEDIA QUERIES ------------------ */
+
+/* Media Query para CELULARES (pantallas pequeñas, hasta 600px) */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;  /* Muestra los enlaces uno debajo del otro */
+    gap: 10px;               /* Menor espacio entre ellos */
+  }
+
+  .productos-container {
+    flex-direction: column;  /* Apila los productos en una columna */
+    align-items: center;     /* Centra verticalmente */
+  }
+}
+
+/* Media Query para TABLETS (de 601px a 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .productos-container {
+    justify-content: space-evenly; /* Distribuye los productos uniformemente */
+  }
+}
+
+/* Media Query para PC (más de 1024px) */
+@media (min-width: 1025px) {
+  .productos-container {
+    justify-content: space-between; /* Aumenta el espacio entre productos */
+  }
+}
