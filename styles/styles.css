@@ -8,12 +8,15 @@ body {
 
 /* Estilo para el encabezado de la página */
 header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
   display: flex;
   justify-content:space-between;
   align-items:center;
   background-color: rgb(26, 68, 184); /* Fondo */
   color: white;              /* Texto blanco */
-  padding: 10px;             /* Espacio interior */
+  padding: 10px;          /* Espacio interior */
   text-align:start;        /* Centra el texto */
 }
 
@@ -25,7 +28,7 @@ header img {
 /* Navegación en forma de lista horizontal */
 nav ul {
   list-style: none;          /* Elimina viñetas */
-  padding: 20px;                /* Elimina relleno */
+  padding: 30px;                /* Elimina relleno */
   display: flex;              /* Activa Flexbox */
   gap: 40px;                 /* Espacio entre los ítems de la lista */
 }
@@ -39,8 +42,14 @@ nav ul li a {
 
 /* Estilo general para todas las secciones */
 section {
-  padding: 20px;             /* Espacio interior */
-  text-align: center;        /* Centra el texto */
+  padding: 10px;             /* Espacio interior */
+  text-align: center;        /* Centra el texto */      
+}
+
+.inicio img{
+  width: 500px;              
+  height: 350px; 
+  object-fit: contain;
 }
 
 /* Contenedor de los productos con Flexbox */
@@ -54,16 +63,31 @@ section {
 
 /* Cada tarjeta de producto */
 .producto {
-  text-align: center;        /* Centra el contenido */
+  text-align: center;
+  width: 200px; 
+  padding: 30px;  
+  border-style:groove;  
 }
 
 /* Imágenes de los productos */
 .producto img {
-  width: 150px;              /* Ancho fijo */
-  height: 150px;             /* Alto fijo */
+  width: 200px;              /* Ancho fijo */
+  height: 250px;             /* Alto fijo */
   object-fit: cover;         /* Cubre el área sin deformarse */
 }
 
+.titulo-producto h3 {
+  width: 105px;
+  height: 50px;
+  justify-content: center;
+}
+
+.btn-agregar {
+  background-color:rgba(3, 23, 84, 0.928); 
+  color: white; 
+  border-radius: 4px;        
+  cursor: pointer; 
+}
 /* */
 .reseñas-container {
   background-color: aqua;
@@ -103,7 +127,7 @@ input, textarea {
 }
 
 /* Botón del formulario */
-button {
+.btn-enviar {
   padding: 10px;             /* Espacio interior */
   background-color:red; /* Fondo verde */
   color: white;              /* Texto blanco */

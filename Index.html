@@ -6,27 +6,39 @@
   <title>PF FrontEnd TT2025</title>
   <link rel="icon" type="image/x-icon" href="/images/Logo de HC Camisetas.png"> 
   <link rel="stylesheet" href="/styles/styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
   <header>
     <img src="/images/Logo moderno de HC Camisetas.png" alt="">
-    <h1>Proyecto Talento Tech</h1>
+    <h1>Proyecto Final BackEnd TT 2025</h1>
     <nav> 
       <ul>
         <li><a href="#inicio">Inicio</a></li> 
         <li><a href="#productos">Productos</a></li> 
         <li><a href="#reseñas">Reseñas</a></li> 
         <li><a href="#contacto">Contacto</a></li>
-        <li><a href=>Carrito</a></li>  
+        <li><a href="/pages/carrito.html" class="carrito"><i class="fa fa-shopping-cart"></i><span id="contador">0</span></a></li>
       </ul>
     </nav> 
   </header>
   <main>
-    <section id="inicio">
-      <h2>Bienvenidos</h2> <!-- Título de la sección -->
-      <img src="/images/Turismo.png" alt="Imagen bienvenida"> <!-- Imagen decorativa -->
-      <p>Descubrí nuestros productos exclusivos.</p> <!-- Texto introductorio -->
+    <section id="inicio" class="inicio">
+      <h2>Bienvenidos</h2>
+      <hr>
+      <img src="/images/Modelo con camiseta HC Travel.png" alt="Modelo M">
+      <h4>Presentamos nuestros diseños exclusivos de la nueva temporada 2025-2026. <br> Para pedidos y consultas completa el formulario de Contacto o encontranos en nuestras Redes Sociales.</h4> 
+      <hr>
+    </section>
+    <section id ="productos">
+      <h2>Productos</h2>
+      <hr>
+      <div id="productos-container" class="productos-container">
+
+
+      </div>
+
     </section>
     <section id="reseñas">
       <h2>Reseñas</h2> <!-- Título de la sección -->
@@ -55,18 +67,18 @@
         <label for="mensaje">Mensaje:</label> <!-- Etiqueta para el mensaje -->
         <textarea id="mensaje" name="mensaje" required></textarea> <!-- Área de texto obligatorio -->
 
-        <button type="submit">Enviar</button> <!-- Botón de envío -->
+        <button class="btn-enviar" type="submit">Enviar</button> <!-- Botón de envío -->
       </form>
-
-      <div class="redes">
-        <img src="/images/facebook_logo.png" alt="Facebook">
-        <img src="/images/instagram logo.png" alt="Instagram">
-        <img src="/images/whatsapp_icon.png" alt="Whatsapp">  
-      </div>
     </section>
   </main>
   <footer>
+    <div class="redes">
+      <img src="/images/facebook_logo.png" alt="Facebook">
+      <img src="/images/instagram logo.png" alt="Instagram">
+      <img src="/images/whatsapp_icon.png" alt="Whatsapp">  
+    </div>
     <p>&copy; 2024-2025 Todos los derechos reservados</p>
   </footer>
+  <script src="js/app.js"></script>
 </body>
 </html>
