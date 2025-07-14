@@ -25,10 +25,10 @@ document.addEventListener("DOMContentLoaded",() => {
           btnAgregar.classList.add("btn-agregar");
           btnAgregar.textContent ="Agregar";
 
-            btnAgregar.addEventListener("click", ()=> {
-              alert(`${producto.title} agregado al carrito`);
-              agregarProducto(producto);
-              actualizarAgregados();
+          btnAgregar.addEventListener("click", ()=> {
+            alert(`${producto.title} agregado al carrito`);
+            agregarProducto(producto);
+            actualizarAgregados();
             });
 
             tarjetaProducto.appendChild(imagenProducto);

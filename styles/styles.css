@@ -43,7 +43,7 @@ nav ul li a {
 /* Estilo general para todas las secciones */
 section {
   padding: 10px;             /* Espacio interior */
-  text-align: center;        /* Centra el texto */      
+  text-align: center;        /* Centra el texto */;      
 }
 
 .inicio img{
@@ -53,12 +53,12 @@ section {
 }
 
 /* Contenedor de los productos con Flexbox */
-.productos-container {
+.productos-container, .contenedor-carrito {
   display: flex;             /* Activa Flexbox */
   justify-content:center;    /* Centra horizontalmente */
   gap: 20px;                 /* Espacio entre productos */
   flex-wrap: wrap;           /* Permite que bajen a otra línea en pantallas pequeñas */
-  margin-top: 20px;          /* Espacio superior */
+  margin-top: 15px;         /* Espacio superior */
 }
 
 /* Cada tarjeta de producto */
@@ -76,13 +76,14 @@ section {
   object-fit: cover;         /* Cubre el área sin deformarse */
 }
 
-.titulo-producto h3 {
+h3 .titulo-producto {
   width: 105px;
   height: 50px;
   justify-content: center;
 }
 
-.btn-agregar {
+.btn-agregar, .btn-finalizar {
+  padding: 10px 25px; 
   background-color:rgba(3, 23, 84, 0.928); 
   color: white; 
   border-radius: 4px;        
@@ -111,7 +112,7 @@ form {
   display: flex;             /* Activa Flexbox */
   flex-direction: column;    /* Coloca los elementos en columna */
   gap: 10px;                 /* Espacio entre campos */
-  max-width: 400px;          /* Ancho máximo */
+  max-width: 600px;          /* Ancho máximo */
   margin: 0 auto;            /* Centrado horizontal */
 }
 
@@ -127,14 +128,31 @@ input, textarea {
 }
 
 /* Botón del formulario */
-.btn-enviar {
-  padding: 10px;             /* Espacio interior */
-  background-color:red; /* Fondo verde */
+.btn-enviar, .btn-eliminar {
+  padding: 10px 25px;          /* Espacio interior */
+  background-color:red;      /* Fondo rojo */
   color: white;              /* Texto blanco */
-  border: none;              /* Sin borde */
-  border-radius: 4px;        /* Bordes redondeados */
-  cursor: pointer;           /* Cambia el cursor al pasar por encima */
+  border-radius: 4px;          /* Bordes redondeados */
+  cursor: pointer;             /* Cambia el cursor al pasar por encima */
+  align-self: center;          
 }
+
+.btn-vaciar, .btn-Continuar {
+  padding: 10px 25px; 
+  color: white; 
+  background-color:rgba(24, 125, 6, 0.857);      /* Fondo rojo */
+  border-radius: 4px;          /* Bordes redondeados */
+  cursor: pointer;             /* Cambia el cursor al pasar por encima */
+  align-self: center;          
+}
+
+.acciones-carrito {
+  display:flex;
+  justify-content: space-evenly;
+  margin: 20px;
+}
+
+
 
 /* Estilo para logos Redes Sociales */
 .redes {
